@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 public class ChooseSide extends Activity {
 
+    public boolean first_bat,first_bowl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +21,13 @@ public class ChooseSide extends Activity {
 
     public void bat_click(View view){
         Intent i = new Intent(this,Batting.class);
+        first_bat = true;
         startActivity(i);
     }
 
     public void bowl_click(View view){
         Intent j = new Intent(this,Bowling.class);
+        first_bowl = true;
         startActivity(j);
     }
 }

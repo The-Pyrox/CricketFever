@@ -13,75 +13,82 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:id="@+id/button8"
+        android:id="@+id/bat_1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="85dp" />
+        android:layout_marginBottom="85dp"
+        android:onClick="batClick_1"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
-        android:id="@+id/button9"
-        android:layout_alignTop="@+id/button8"
-        android:layout_toRightOf="@+id/button8"
-        android:layout_toEndOf="@+id/button8" />
+        android:id="@+id/bat_2"
+        android:layout_alignTop="@+id/bat_1"
+        android:layout_toRightOf="@+id/bat_1"
+        android:layout_toEndOf="@+id/bat_1"
+        android:onClick="batClick_2"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3"
-        android:id="@+id/button10"
-        android:layout_alignTop="@+id/button9"
-        android:layout_toRightOf="@+id/button9"
-        android:layout_toEndOf="@+id/button9" />
+        android:id="@+id/bat_3"
+        android:layout_alignTop="@+id/bat_2"
+        android:layout_toRightOf="@+id/bat_2"
+        android:layout_toEndOf="@+id/bat_2"
+        android:onClick="batClick_3"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="4"
-        android:id="@+id/button11"
-        android:layout_alignTop="@+id/button10"
+        android:id="@+id/bat_4"
+        android:layout_alignTop="@+id/bat_3"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        />
+        android:onClick="batClick_4"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5"
-        android:id="@+id/button12"
-        android:layout_below="@+id/button9"
+        android:id="@+id/bat_5"
+        android:layout_below="@+id/bat_2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="batClick_5"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="6"
-        android:id="@+id/button13"
-        android:layout_below="@+id/button9"
-        android:layout_toRightOf="@+id/button8"
-        android:layout_toEndOf="@+id/button8" />
+        android:id="@+id/bat_6"
+        android:layout_below="@+id/bat_2"
+        android:layout_toRightOf="@+id/bat_1"
+        android:layout_toEndOf="@+id/bat_1"
+        android:onClick="batClick_6"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10"
-        android:id="@+id/button14"
-        android:layout_below="@+id/button9"
-        android:layout_toRightOf="@+id/button9"
-        android:layout_toEndOf="@+id/button9" />
+        android:id="@+id/bat_10"
+        android:layout_below="@+id/bat_2"
+        android:layout_toRightOf="@+id/bat_2"
+        android:layout_toEndOf="@+id/bat_2"
+        android:onClick="batClick_10"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
-        android:id="@+id/button15"
-        android:layout_alignBottom="@+id/button13"
+        android:id="@+id/bat_exit"
+        android:layout_alignBottom="@+id/bat_6"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="batClick_exit"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,15 +107,15 @@
         android:text="Player"
         android:id="@+id/textView4"
         android:layout_alignTop="@+id/textView3"
-        android:layout_alignRight="@+id/button11"
-        android:layout_alignEnd="@+id/button11" />
+        android:layout_alignRight="@+id/bat_4"
+        android:layout_alignEnd="@+id/bat_4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView5"
+        android:id="@+id/batcomp_score"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -118,7 +125,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView6"
+        android:id="@+id/batplayer_score"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/textView4"
         android:layout_alignEnd="@+id/textView4" />
@@ -128,9 +135,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView7"
+        android:id="@+id/battotal_score"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="74dp" />
-
 
 </RelativeLayout>

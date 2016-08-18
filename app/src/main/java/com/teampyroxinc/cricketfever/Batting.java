@@ -2,10 +2,18 @@ package com.teampyroxinc.cricketfever;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
+
+import java.util.Random;
 
 public class Batting extends Activity {
+
+    public Random rand;
+    public Integer comp_score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,4 +24,76 @@ public class Batting extends Activity {
 
         setContentView(R.layout.activity_batting);
     }
+
+    public void batClick_1(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(1));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+
+
+    }
+
+    public void batClick_2(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(2));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+
+    }
+
+    public void batClick_3(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(3));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+
+    }
+    public void batClick_4(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(4));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+    }
+    public void batClick_5(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(5));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+
+    }
+    public void batClick_6(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(6));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+
+    }
+    public void batClick_10(View view){
+        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        textView.setText(String.valueOf(10));
+        comp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(comp_score));
+    }
+    public void batClick_exit(){
+
+    }
+
+    public int display_compscore(){
+        Integer a;
+        do {
+           a = rand.nextInt(10);
+        }while (a!=0 || a!=7 || a!=8 || a!=9);
+        return a;
+
+    }
+
+
 }
