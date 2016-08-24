@@ -29,13 +29,15 @@ public class Batting extends Activity {
     }
 
     public void batClick_1(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 1;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
+
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
@@ -45,52 +47,56 @@ public class Batting extends Activity {
     }
 
     public void batClick_2(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 2;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
     }
 
     public void batClick_3(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 3;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
 
     }
     public void batClick_4(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 4;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
 
     }
     public void batClick_5(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 5;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
@@ -98,13 +104,14 @@ public class Batting extends Activity {
 
     }
     public void batClick_6(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 6;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
@@ -112,13 +119,14 @@ public class Batting extends Activity {
 
     }
     public void batClick_10(View view){
+        batcomp_score = display_compscore();
+        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        textView1.setText(String.valueOf(batcomp_score));
         batplayer_score = 10;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
         textView.setText(String.valueOf(batplayer_score));
-        batcomp_score = display_compscore();
+
         battotal_score = display_score(batplayer_score);
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
-        textView1.setText(String.valueOf(batcomp_score));
         TextView textView2 = (TextView)findViewById(R.id.battotal_score);
         textView2.setText(String.valueOf(battotal_score));
         check_wicket(batplayer_score,batcomp_score);
@@ -150,7 +158,7 @@ public class Batting extends Activity {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
