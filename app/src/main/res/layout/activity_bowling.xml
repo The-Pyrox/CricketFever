@@ -38,7 +38,7 @@
         android:layout_alignTop="@+id/button9"
         android:layout_toRightOf="@+id/button9"
         android:layout_toEndOf="@+id/button9"
-        android:onClick="bowlClick_2" />
+        android:onClick="bowlClick_3" />
 
     <Button
         android:layout_width="wrap_content"
