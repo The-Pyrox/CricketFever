@@ -12,8 +12,8 @@ import java.util.Random;
 
 public class Batting extends Activity {
 
-    public Random rand;
-    public Integer comp_score;
+
+    public Integer comp_score,a=4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,10 +87,10 @@ public class Batting extends Activity {
     }
 
     public int display_compscore(){
-        Integer a;
+        Random random = new Random();
         do {
-           a = rand.nextInt(10);
-        }while (a!=0 || a!=7 || a!=8 || a!=9);
+            a = random.nextInt(11);
+        }while(a ==0 || a==7 || a==8 || a == 9);
         return a;
 
     }

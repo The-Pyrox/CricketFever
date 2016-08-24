@@ -7,7 +7,6 @@ import android.view.WindowManager;
 
 public class Bowling extends Activity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
