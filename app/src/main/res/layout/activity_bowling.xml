@@ -17,7 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="85dp" />
+        android:layout_marginBottom="85dp"
+        android:onClick="bowlClick_1"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
         android:id="@+id/button9"
         android:layout_alignTop="@+id/button8"
         android:layout_toRightOf="@+id/button8"
-        android:layout_toEndOf="@+id/button8" />
+        android:layout_toEndOf="@+id/button8"
+        android:onClick="bowlClick_2"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -35,7 +37,8 @@
         android:id="@+id/button10"
         android:layout_alignTop="@+id/button9"
         android:layout_toRightOf="@+id/button9"
-        android:layout_toEndOf="@+id/button9" />
+        android:layout_toEndOf="@+id/button9"
+        android:onClick="bowlClick_2" />
 
     <Button
         android:layout_width="wrap_content"
@@ -45,7 +48,7 @@
         android:layout_alignTop="@+id/button10"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        />
+        android:onClick="bowlClick_4"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -54,7 +57,8 @@
         android:id="@+id/button12"
         android:layout_below="@+id/button9"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="bowlClick_5"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -63,7 +67,8 @@
         android:id="@+id/button13"
         android:layout_below="@+id/button9"
         android:layout_toRightOf="@+id/button8"
-        android:layout_toEndOf="@+id/button8" />
+        android:layout_toEndOf="@+id/button8"
+        android:onClick="bowlClick_6"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -72,7 +77,8 @@
         android:id="@+id/button14"
         android:layout_below="@+id/button9"
         android:layout_toRightOf="@+id/button9"
-        android:layout_toEndOf="@+id/button9" />
+        android:layout_toEndOf="@+id/button9"
+        android:onClick="bowlClick_10"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -108,7 +114,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView5"
+        android:id="@+id/bowlcomp_score"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -118,7 +124,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView6"
+        android:id="@+id/bowlplayer_score"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/textView4"
         android:layout_alignEnd="@+id/textView4" />
@@ -128,7 +134,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView7"
+        android:id="@+id/bowltotal_score"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="74dp" />
 

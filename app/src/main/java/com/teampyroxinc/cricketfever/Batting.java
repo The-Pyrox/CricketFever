@@ -13,7 +13,7 @@ import java.util.Random;
 public class Batting extends Activity {
 
 
-    public Integer comp_score,battotal_score=0,a=0;
+    private Integer comp_score,battotal_score=0,a=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
