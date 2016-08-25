@@ -18,8 +18,13 @@ public class Batting extends Activity {
         return out;
     }
 
-    private Integer batcomp_score,batplayer_score,battotal_score=0,a=0;
-    private boolean out;
+    public Integer batcomp_score,batplayer_score,a=0;
+    public boolean out;
+    public Integer battotal_score=0;
+
+    public Integer getBattotal_score() {
+        return battotal_score;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,62 +34,53 @@ public class Batting extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_batting);
+
+
     }
 
     public void batClick_1(View view){
         display_batcompscore();
         display_batplayerscore(1);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(1);
+
     }
 
     public void batClick_2(View view){
         display_batcompscore();
         display_batplayerscore(2);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(2);
+
     }
 
     public void batClick_3(View view){
         display_batcompscore();
         display_batplayerscore(3);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(3);
+
     }
     public void batClick_4(View view){
         display_batcompscore();
         display_batplayerscore(4);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(4);
+
     }
     public void batClick_5(View view){
         display_batcompscore();
         display_batplayerscore(5);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(5);
+
     }
     public void batClick_6(View view){
         display_batcompscore();
         display_batplayerscore(6);
         check_wicket(batplayer_score,batcomp_score);
-        display_score(6);
+
     }
     public void batClick_10(View view){
         display_batcompscore();
         display_batplayerscore(10);
         check_wicket(batplayer_score,batcomp_score);
-        if (isOut()){
-            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-            v.vibrate(1000);
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            Intent i = new Intent(this,MidActivity.class);
-            startActivity(i);
-        }
-        display_score(10);
+
     }
     public void batClick_exit(){
         Intent i = new Intent(this,MainActivity.class);
@@ -120,6 +116,18 @@ public class Batting extends Activity {
     private void check_wicket(int p,int q){
         if (p==q){
             out = true;
+            Bundle bundle = new Bundle();
+            bundle.putInt("Total Score",battotal_score);
+
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(1000);
+            for (int j= 0;j<99999999;j++);
+            Intent i = new Intent(this,MidActivity.class);
+            i.putExtras(bundle);
+            startActivity(i);
+        }
+        else if (out==false){
+            display_score(p);
         }
     }
 
