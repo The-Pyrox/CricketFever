@@ -12,12 +12,12 @@ import android.os.Vibrator;
 
 import java.util.Random;
 
-public class Batting extends Activity {
+public class Batting_First extends Activity {
 
 
-    public Integer batcomp_score,batplayer_score,a=0;
+    private Integer batcomp_score,batplayer_score,a=0;
 
-    public Integer battotal_score=0;
+    private Integer battotal_score=0;
 
 
 
@@ -30,10 +30,6 @@ public class Batting extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_batting);
-
-
-
-
     }
 
     public void batClick_1(View view){
@@ -113,15 +109,17 @@ public class Batting extends Activity {
 
     private void check_wicket(int p,int q){
         if (p==q){
+
             Bundle bundle = new Bundle();
-            bundle.putInt("Total Score",battotal_score);
-            bundle.putBoolean("First Bat",true);
+            bundle.putInt("Total Score", battotal_score);
+            bundle.putBoolean("First Bat", true);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
-            for (int j= 0;j<99999999;j++);
-            Intent bat = new Intent(this,MidActivity.class);
+            for (int j = 0; j < 99999999; j++) ;
+            Intent bat = new Intent(this, MidActivity.class);
             bat.putExtras(bundle);
             startActivity(bat);
+
         }
         else {
             display_score(p);

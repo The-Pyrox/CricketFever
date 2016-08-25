@@ -24,13 +24,13 @@ public class ChooseSide extends Activity {
 
 
     public void bat_click(View view){
-        Intent start = new Intent(this,Batting.class);
+        Intent start = new Intent(this,Batting_First.class);
 
         startActivity(start);
     }
 
     public void bowl_click(View view){
-        Intent start = new Intent(this,Bowling.class);
+        Intent start = new Intent(this,Bowling_First.class);
 
         startActivity(start);
     }

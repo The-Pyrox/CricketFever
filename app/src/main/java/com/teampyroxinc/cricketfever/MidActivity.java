@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class MidActivity extends Activity {
@@ -35,11 +34,18 @@ public class MidActivity extends Activity {
 
     public void change_side(View view) {
         if (side == true) {
-            Intent bowl = new Intent(this, Bowling.class);
+            Intent bowl = new Intent(this, Bowling_First.class);
+            Bundle bowl_bundle = new Bundle();
+            bowl_bundle.putInt("Target",tot_score);
+            bowl.putExtras(bowl_bundle);
             startActivity(bowl);
+
         }
         else{
-            Intent bat = new Intent(this,Batting.class);
+            Intent bat = new Intent(this,Batting_First.class);
+            Bundle bat_bundle = new Bundle();
+            bat_bundle.putInt("Target",tot_score);
+            bat.putExtras(bat_bundle);
             startActivity(bat);
         }
     }

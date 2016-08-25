@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teampyroxinc.cricketfever">
-    <uses-permission android:name="android.permission.VIBRATE"/>
 
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -18,9 +18,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseSide" />
-        <activity android:name=".Batting" />
-        <activity android:name=".Bowling" />
-        <activity android:name=".MidActivity"></activity>
+        <activity android:name=".Batting_First" />
+        <activity android:name=".Bowling_First" />
+        <activity android:name=".MidActivity" />
+        <activity android:name=".EndActivity" />
+        <activity android:name=".Batting_Second" />
+        <activity android:name=".Bowling_Second"></activity>
     </application>
 
 </manifest>
