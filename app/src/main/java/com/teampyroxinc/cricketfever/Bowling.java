@@ -69,7 +69,7 @@ public class Bowling extends Activity {
         display_bowlplayerscore(10);
         check_wicket(bowlcomp_score,bowlplayer_score);
     }
-    public void batClick_exit(){
+    public void batClick_exit(View view){
         Intent i = new Intent(this,MainActivity.class);
         startActivity(i);
 
@@ -102,13 +102,13 @@ public class Bowling extends Activity {
     }
     private void check_wicket(int p,int q){
         if (p==q){
-            Bundle bowl_bundle = new Bundle();
-            bowl_bundle.putInt("Total Score",bowltotal_score);
+            Bundle bundle = new Bundle();
+            bundle.putInt("Total Score",bowltotal_score);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j= 0;j<99999999;j++);
             Intent bowl = new Intent(this,MidActivity.class);
-            bowl.putExtras(bowl_bundle);
+            bowl.putExtras(bundle);
             startActivity(bowl);
         }
         else{

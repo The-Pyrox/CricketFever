@@ -21,6 +21,7 @@ public class Batting extends Activity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,8 @@ public class Batting extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_batting);
+
+
 
 
     }
@@ -77,7 +80,7 @@ public class Batting extends Activity {
         check_wicket(batplayer_score,batcomp_score);
 
     }
-    public void batClick_exit(){
+    public void batClick_exit(View view){
         Intent i = new Intent(this,MainActivity.class);
         startActivity(i);
 
@@ -110,13 +113,14 @@ public class Batting extends Activity {
 
     private void check_wicket(int p,int q){
         if (p==q){
-            Bundle bat_bundle = new Bundle();
-            bat_bundle.putInt("Total Score",battotal_score);
+            Bundle bundle = new Bundle();
+            bundle.putInt("Total Score",battotal_score);
+            bundle.putBoolean("First Bat",true);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j= 0;j<99999999;j++);
             Intent bat = new Intent(this,MidActivity.class);
-            bat.putExtras(bat_bundle);
+            bat.putExtras(bundle);
             startActivity(bat);
         }
         else {
