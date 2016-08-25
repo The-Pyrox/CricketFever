@@ -110,14 +110,14 @@ public class Batting extends Activity {
 
     private void check_wicket(int p,int q){
         if (p==q){
-            Bundle bundle = new Bundle();
-            bundle.putInt("Total Score",battotal_score);
+            Bundle bat_bundle = new Bundle();
+            bat_bundle.putInt("Total Score",battotal_score);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j= 0;j<99999999;j++);
-            Intent i = new Intent(this,MidActivity.class);
-            i.putExtras(bundle);
-            startActivity(i);
+            Intent bat = new Intent(this,MidActivity.class);
+            bat.putExtras(bat_bundle);
+            startActivity(bat);
         }
         else {
             display_score(p);

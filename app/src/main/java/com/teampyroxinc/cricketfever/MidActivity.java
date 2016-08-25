@@ -23,8 +23,8 @@ public class MidActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_mid);
         Bundle bundle = getIntent().getExtras();
-        tot_score = bundle.getInt("Total Score");
-        TextView textView = (TextView)findViewById(R.id.textView5);
+        tot_score = bundle.getInt("Total Score",0);
+        TextView textView = (TextView)findViewById(R.id.display_target);
         textView.setText(String.valueOf(tot_score));
     }
 }

@@ -94,21 +94,22 @@ public class Bowling extends Activity {
 
     }
 
-    public int display_score(int button_clicked){
+    public void display_score(int button_clicked){
         bowltotal_score = bowltotal_score+ button_clicked;
-        return bowltotal_score;
+        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
+        textView2.setText(String.valueOf(bowltotal_score));
+
     }
     private void check_wicket(int p,int q){
         if (p==q){
+            Bundle bowl_bundle = new Bundle();
+            bowl_bundle.putInt("Total Score",bowltotal_score);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            Intent i = new Intent(this,MidActivity.class);
-            startActivity(i);
+            for (int j= 0;j<99999999;j++);
+            Intent bowl = new Intent(this,MidActivity.class);
+            bowl.putExtras(bowl_bundle);
+            startActivity(bowl);
         }
         else{
             display_score(p);
