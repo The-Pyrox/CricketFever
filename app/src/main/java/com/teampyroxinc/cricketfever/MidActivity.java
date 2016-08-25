@@ -34,7 +34,7 @@ public class MidActivity extends Activity {
 
     public void change_side(View view) {
         if (side == true) {
-            Intent bowl = new Intent(this, Bowling_First.class);
+            Intent bowl = new Intent(this, Bowling_Second.class);
             Bundle bowl_bundle = new Bundle();
             bowl_bundle.putInt("Target",tot_score);
             bowl.putExtras(bowl_bundle);
@@ -42,7 +42,7 @@ public class MidActivity extends Activity {
 
         }
         else{
-            Intent bat = new Intent(this,Batting_First.class);
+            Intent bat = new Intent(this,Batting_Second.class);
             Bundle bat_bundle = new Bundle();
             bat_bundle.putInt("Target",tot_score);
             bat.putExtras(bat_bundle);

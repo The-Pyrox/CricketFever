@@ -1,5 +1,6 @@
 package com.teampyroxinc.cricketfever;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Vibrator;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class Bowling_Second extends AppCompatActivity {
+public class Bowling_Second extends Activity {
     private Integer bowlcomp_score,bowlplayer_score,bowltotal_score=0,a=0,target;
 
 
@@ -24,8 +25,8 @@ public class Bowling_Second extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_bowling__second);
-        Bundle bat_bundle = getIntent().getExtras();
-        target = bat_bundle.getInt("Target");
+        Bundle bowl_bundle = getIntent().getExtras();
+        target = bowl_bundle.getInt("Target",0);
         TextView textView = (TextView)findViewById(R.id.target);
         textView.setText(String.valueOf(target));
 
@@ -87,13 +88,13 @@ public class Bowling_Second extends AppCompatActivity {
             a = random.nextInt(11);
         }while(a ==0 || a==7 || a==8 || a == 9);
         bowlcomp_score = a;
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
+        TextView textView1 = (TextView)findViewById(R.id.bowlComp_score);
         textView1.setText(String.valueOf(a));
     }
 
     public void display_bowlplayerscore(int x){
         bowlplayer_score = x;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
+        TextView textView = (TextView)findViewById(R.id.bowlPlayer_score);
         textView.setText(String.valueOf(bowlplayer_score));
 
 
@@ -101,7 +102,7 @@ public class Bowling_Second extends AppCompatActivity {
 
     public void display_score(int button_clicked){
         bowltotal_score = bowltotal_score+ button_clicked;
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
+        TextView textView2 = (TextView)findViewById(R.id.bowlTotal_score);
         textView2.setText(String.valueOf(bowltotal_score));
 
     }
@@ -118,7 +119,7 @@ public class Bowling_Second extends AppCompatActivity {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j = 0; j < 99999999; j++) ;
-            Intent bowl = new Intent(this, MidActivity.class);
+            Intent bowl = new Intent(this, EndActivity.class);
             bowl.putExtras(bundle);
             startActivity(bowl);
 

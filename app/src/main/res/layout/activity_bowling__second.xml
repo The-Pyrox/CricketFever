@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView16"
+        android:id="@+id/bowlComp_score"
         android:layout_below="@+id/textView14"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -45,8 +45,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView19"
-        android:layout_alignTop="@+id/textView16"
+        android:id="@+id/bowlPlayer_score"
+        android:layout_alignTop="@+id/bowlComp_score"
         android:layout_alignRight="@+id/textView15"
         android:layout_alignEnd="@+id/textView15" />
 
@@ -121,7 +121,7 @@
         android:id="@+id/button30"
         android:onClick="bowlclick_10"
         android:layout_alignBottom="@+id/button29"
-        android:layout_toLeftOf="@+id/textView19"
+        android:layout_toLeftOf="@+id/bowlPlayer_score"
         android:layout_toRightOf="@+id/button26"
         android:layout_toEndOf="@+id/button26" />
 
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView17"
+        android:id="@+id/target"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/textView14"
         android:layout_toEndOf="@+id/textView14" />
@@ -149,8 +149,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
-        android:id="@+id/textView18"
-        android:layout_above="@+id/textView19"
+        android:id="@+id/bowlTotal_score"
+        android:layout_above="@+id/bowlPlayer_score"
         android:layout_alignRight="@+id/button26"
         android:layout_alignEnd="@+id/button26" />
 

@@ -22,12 +22,12 @@ public class EndActivity extends AppCompatActivity {
         textView.setText(String.valueOf(bundle.getInt("Android")));
         textView1.setText(String.valueOf(bundle.getInt("Player")));
         if (bundle.getBoolean("Result")==true){
-            TextView textView2 = (TextView)findViewById(R.id.target);
+            TextView textView2 = (TextView)findViewById(R.id.result);
             textView2.setText("You Win!");
         }
         else{
-            TextView textView2 = (TextView)findViewById(R.id.target);
-            textView2.setText("You lose!");
+            TextView textView3 = (TextView)findViewById(R.id.result);
+            textView3.setText("You lose!");
         }
     }
 }

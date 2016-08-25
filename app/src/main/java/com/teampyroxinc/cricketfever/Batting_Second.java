@@ -1,5 +1,6 @@
 package com.teampyroxinc.cricketfever;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Vibrator;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class Batting_Second extends AppCompatActivity {
+public class Batting_Second extends Activity {
 
     private Integer batcomp_score,batplayer_score,a=0,target;
 
@@ -90,20 +91,20 @@ public class Batting_Second extends AppCompatActivity {
             a = random.nextInt(11);
         }while(a ==0 || a==7 || a==8 || a == 9);
         batcomp_score = a;
-        TextView textView1 = (TextView)findViewById(R.id.batcomp_score);
+        TextView textView1 = (TextView)findViewById(R.id.batComp_score);
         textView1.setText(String.valueOf(a));
     }
 
     public void display_batplayerscore(int x){
         batplayer_score = x;
-        TextView textView = (TextView)findViewById(R.id.batplayer_score);
+        TextView textView = (TextView)findViewById(R.id.batPlayer_score);
         textView.setText(String.valueOf(batplayer_score));
 
     }
 
     public void display_score(int button_clicked){
         battotal_score = battotal_score+ button_clicked;
-        TextView textView2 = (TextView)findViewById(R.id.battotal_score);
+        TextView textView2 = (TextView)findViewById(R.id.batTotal_score);
         textView2.setText(String.valueOf(battotal_score));
 
     }
