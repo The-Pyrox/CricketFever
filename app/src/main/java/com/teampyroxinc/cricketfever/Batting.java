@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -14,17 +13,13 @@ import android.os.Vibrator;
 import java.util.Random;
 
 public class Batting extends Activity {
-    public boolean isOut() {
-        return out;
-    }
+
 
     public Integer batcomp_score,batplayer_score,a=0;
-    public boolean out;
+
     public Integer battotal_score=0;
 
-    public Integer getBattotal_score() {
-        return battotal_score;
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +97,7 @@ public class Batting extends Activity {
     public void display_batplayerscore(int x){
         batplayer_score = x;
         TextView textView = (TextView)findViewById(R.id.batplayer_score);
-        textView.setText(String.valueOf(x));
+        textView.setText(String.valueOf(batplayer_score));
 
     }
 
@@ -115,10 +110,8 @@ public class Batting extends Activity {
 
     private void check_wicket(int p,int q){
         if (p==q){
-            out = true;
             Bundle bundle = new Bundle();
             bundle.putInt("Total Score",battotal_score);
-
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j= 0;j<99999999;j++);
@@ -126,7 +119,7 @@ public class Batting extends Activity {
             i.putExtras(bundle);
             startActivity(i);
         }
-        else if (out==false){
+        else {
             display_score(p);
         }
     }

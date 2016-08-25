@@ -26,103 +26,47 @@ public class Bowling extends Activity {
         setContentView(R.layout.activity_bowling);
     }
     public void bowlClick_1(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 1;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(1);
         check_wicket(bowlcomp_score,bowlplayer_score);
 
 
     }
 
     public void bowlClick_2(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 2;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(2);
         check_wicket(bowlcomp_score,bowlplayer_score);
 
     }
 
     public void bowlClick_3(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 3;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(3);
         check_wicket(bowlcomp_score,bowlplayer_score);
 
 
     }
     public void bowlClick_4(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 4;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(4);
         check_wicket(bowlcomp_score,bowlplayer_score);
     }
     public void bowlClick_5(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 5;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(5);
         check_wicket(bowlcomp_score,bowlplayer_score);
 
     }
     public void bowlClick_6(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 6;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(6);
         check_wicket(bowlcomp_score,bowlplayer_score);
 
     }
     public void bowlClick_10(View view){
-        bowlcomp_score = display_compscore();
-        bowlplayer_score = 10;
-        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
-        textView.setText(String.valueOf(bowlplayer_score));
-
-        bowltotal_score = display_score(bowlcomp_score);
-        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
-        textView1.setText(String.valueOf(bowlcomp_score));
-        TextView textView2 = (TextView)findViewById(R.id.bowltotal_score);
-        textView2.setText(String.valueOf(bowltotal_score));
+        display_bowlcompscore();
+        display_bowlplayerscore(10);
         check_wicket(bowlcomp_score,bowlplayer_score);
     }
     public void batClick_exit(){
@@ -132,12 +76,21 @@ public class Bowling extends Activity {
 
     }
 
-    public int display_compscore(){
+    public void display_bowlcompscore(){
         Random random = new Random();
         do {
             a = random.nextInt(11);
         }while(a ==0 || a==7 || a==8 || a == 9);
-        return a;
+        bowlcomp_score = a;
+        TextView textView1 = (TextView)findViewById(R.id.bowlcomp_score);
+        textView1.setText(String.valueOf(a));
+    }
+
+    public void display_bowlplayerscore(int x){
+        bowlplayer_score = x;
+        TextView textView = (TextView)findViewById(R.id.bowlplayer_score);
+        textView.setText(String.valueOf(bowlplayer_score));
+
 
     }
 
@@ -156,6 +109,9 @@ public class Bowling extends Activity {
             }
             Intent i = new Intent(this,MidActivity.class);
             startActivity(i);
+        }
+        else{
+            display_score(p);
         }
     }
 }
