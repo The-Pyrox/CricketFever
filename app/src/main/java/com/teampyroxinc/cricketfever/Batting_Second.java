@@ -110,24 +110,36 @@ public class Batting_Second extends Activity {
     }
 
     private void check_wicket(int p,int q){
-        if (p==q){
+        if (battotal_score<=target){
+            if (p==q){
+                Bundle bundle = new Bundle();
+                bundle.putInt("Player", battotal_score);
+                bundle.putInt("Android",target);
+                bundle.putBoolean("Result",false);
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(1000);
+                for (int j = 0; j < 99999999; j++) ;
+                Intent bat = new Intent(this, EndActivity.class);
+                bat.putExtras(bundle);
+                startActivity(bat);
+
+            }
+            else {
+                display_score(p);
+            }
+
+    }else
+        {
             Bundle bundle = new Bundle();
             bundle.putInt("Player", battotal_score);
             bundle.putInt("Android",target);
-            if (battotal_score>target)
-                bundle.putBoolean("Result",true);
-            else
-                bundle.putBoolean("Result",false);
+            bundle.putBoolean("Result",true);
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(1000);
             for (int j = 0; j < 99999999; j++) ;
             Intent bat = new Intent(this, EndActivity.class);
             bat.putExtras(bundle);
             startActivity(bat);
-
-        }
-        else {
-            display_score(p);
         }
     }
 

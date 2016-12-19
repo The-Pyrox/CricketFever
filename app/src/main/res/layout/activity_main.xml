@@ -26,17 +26,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="Single Player"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
-        android:onClick="play_click"/>
+        android:onClick="single_click (MainActivity)"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Multi-Player"
         android:id="@+id/button2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="multi_click" />
 
     <Button
         android:layout_width="wrap_content"

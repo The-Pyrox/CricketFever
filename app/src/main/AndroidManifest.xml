@@ -23,7 +23,8 @@
         <activity android:name=".MidActivity" />
         <activity android:name=".EndActivity" />
         <activity android:name=".Batting_Second" />
-        <activity android:name=".Bowling_Second"></activity>
+        <activity android:name=".Bowling_Second" />
+        <activity android:name=".SearchPeers"></activity>
     </application>
 
 </manifest>

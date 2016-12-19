@@ -17,8 +17,14 @@ public class MainActivity extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
     }
-    public void play_click(View view){
+    public void single_click(View view){
         Intent i = new Intent(this,ChooseSide.class);
         startActivity(i);
+    }
+
+    public void multi_click(View view){
+        Intent i = new Intent(this,SearchPeers.class);
+        startActivity(i);
+
     }
 }

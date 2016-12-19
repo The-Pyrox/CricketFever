@@ -119,7 +119,7 @@
         android:layout_height="wrap_content"
         android:text="EXIT"
         android:id="@+id/button30"
-        android:onClick="bowlclick_10"
+        android:onClick="bowlclick_exit"
         android:layout_alignBottom="@+id/button29"
         android:layout_toLeftOf="@+id/bowlPlayer_score"
         android:layout_toRightOf="@+id/button26"
@@ -132,6 +132,7 @@
         android:id="@+id/button31"
         android:layout_alignTop="@+id/button30"
         android:layout_toLeftOf="@+id/button30"
+        android:onClick="bowlclick_10"
         android:layout_toStartOf="@+id/button30" />
 
     <TextView
