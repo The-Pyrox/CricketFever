@@ -24,7 +24,9 @@
         <activity android:name=".EndActivity" />
         <activity android:name=".Batting_Second" />
         <activity android:name=".Bowling_Second" />
-        <activity android:name=".SearchPeers"></activity>
+        <activity android:name=".SearchPeers" />
+        <activity android:name=".Server_batting_first" />
+        <activity android:name=".Server_bowling_first"></activity>
     </application>
 
 </manifest>

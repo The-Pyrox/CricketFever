@@ -29,7 +29,7 @@
         android:text="Single Player"
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
-        android:onClick="single_click (MainActivity)"/>
+        android:onClick="single_click"/>
 
     <Button
         android:layout_width="wrap_content"
